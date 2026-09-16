@@ -1,0 +1,11 @@
+node_modules
+*.exe
+*.out
+uploads/*.cpp
+problems/*
+.vscode/
+.env
+
+*.db
+*.db-wal
+*.db-shm

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đăng ký - Custom OJ</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+  </head>
+  <body class="login-page auth-body">
+    <div class="auth-container login-container">
+      <div class="auth-card login-card">
+        <img class="logo-big" src="assets/images/logo.png" alt="Yuuka OJ" />
+        <h1>Đăng ký tài khoản</h1>
+        <p class="small">Tạo tài khoản để nộp bài trên Custom OJ</p>
+        <form id="register-form" class="auth-form login-form">
+          <div class="form-group">
+            <input
+              id="username"
+              type="text"
+              name="username"
+              placeholder="Tên đăng nhập"
+              required
+              autocomplete="username"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              id="pw"
+              type="password"
+              name="password"
+              placeholder="Mật khẩu"
+              required
+              autocomplete="new-password"
+              minlength="6"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              id="pw2"
+              type="password"
+              name="confirmPassword"
+              placeholder="Nhập lại mật khẩu"
+              required
+              autocomplete="new-password"
+              minlength="6"
+            />
+          </div>
+
+          <div
+            id="form-msg"
+            class="small"
+            style="color: var(--danger); min-height: 18px"
+          ></div>
+
+          <button type="submit" class="btn">Đăng ký</button>
+        </form>
+
+        <p class="small center mt8">
+          Đã có tài khoản? <a href="/login" class="link">Đăng nhập</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="js/register.js"></script>
+  </body>
+</html>

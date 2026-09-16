@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom OJ</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+    <script>
+      window.MathJax = {
+        options: {
+          enableAssistiveMml: false,
+          renderActions: {
+            addMenu: [],
+          },
+        },
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: { fontCache: "global" },
+        startup: {
+          typeset: false,
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="card brand">
+          <img class="logo" src="/assets/images/logo.png" alt="Yuuka OJ" />
+          <div>
+            <h1>Custom</h1>
+            <p class="small">OJ - Nộp bài &amp; chấm tự động</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Lịch sử</h3>
+          <ul id="history-list" class="history-list"></ul>
+        </div>
+      </aside>
+
+      <main class="main">
+        <div class="card" style="position: relative">
+          <button id="return-btn" class="btn ghost" aria-label="Close">
+            <span style="font-size: 1.2em" aria-hidden="true">&times;</span>
+          </button>
+
+          <div class="header-row">
+            <h1>Nộp bài</h1>
+          </div>
+
+          <div class="submit-panel">
+            <form id="submit-form" class="form-row">
+              <div class="file-input">
+                <input type="file" name="fileToUpload" accept=".cpp" required />
+                <span class="small">Chọn file .cpp</span>
+              </div>
+              <button class="btn" type="submit">Nộp</button>
+            </form>
+          </div>
+          <p class="small" style="font-style: italic">
+            *hiện tại chỉ hỗ trợ C++17.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="header-row">
+            <h1 id="title" class="card">Tên bài</h1>
+            <p id="memory" class="small" style="font-weight: 600">
+              Giới hạn bộ nhớ:
+            </p>
+            <p id="time" class="small" style="font-weight: 600">
+              Giới hạn thời gian:
+            </p>
+          </div>
+          <div id="body">
+            <md-block id="problem-detail" hmin="1"></md-block>
+          </div>
+        </div>
+      </main>
+
+      <aside class="sidebar">
+        <div class="card brand" style="flex-direction: column">
+          <div id="avatar" class="avatar" style="font-size: 2em">Y</div>
+          <h4 id="username" style="font-style: italic; text-align: center">
+            Xin chào,
+          </h4>
+          <div class="stats">
+            <p id="solved-problems"></p>
+            <p id="total-score"></p>
+            <p id="total-sub"></p>
+          </div>
+          <button class="btn ghost" onclick="location.href = '/logout'">
+            Logout
+          </button>
+        </div>
+      </aside>
+    </div>
+  </body>
+  <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+  <script
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.min.js"></script>
+
+  <script type="module" src="/js/problem.js"></script>
+</html>

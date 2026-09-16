@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login - Custom OJ</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+  </head>
+  <body class="auth-body">
+    <div class="auth-container">
+      <div class="auth-card">
+        <img class="logo-big" src="assets/images/logo.png" alt="Yuuka OJ" />
+        <h1>Custom OJ</h1>
+        <p class="small">Đăng nhập để nộp bài</p>
+        <form class="auth-form login-form" id="login-form">
+          <div class="form-group">
+            <input
+              type="text"
+              name="username"
+              placeholder="Tên đăng nhập"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              name="password"
+              placeholder="Mật khẩu"
+              required
+            />
+          </div>
+          <button type="submit" class="btn">Đăng nhập</button>
+        </form>
+
+        <div
+          id="form-msg"
+          class="small"
+          style="color: var(--danger); min-height: 18px; margin-top: 5px"
+        ></div>
+
+        <p class="small center mt8">
+          Chưa có tài khoản? <a href="/register" class="link">Đăng ký</a>
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="js/login.js"></script>
+</html>

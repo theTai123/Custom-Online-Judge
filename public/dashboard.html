@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom OJ</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="card brand">
+          <img class="logo" src="assets/images/logo.png" alt="Yuuka OJ" />
+          <div>
+            <h1>Custom</h1>
+            <p class="small">OJ - Nộp bài &amp; chấm tự động</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Lịch sử</h3>
+          <ul id="history-list" class="history-list"></ul>
+        </div>
+      </aside>
+
+      <main class="main">
+        <div class="card">
+          <div class="header-row">
+            <h1>Danh sách bài</h1>
+          </div>
+
+          <div id="problem-list" class="card mt8 problem-list">
+            <ul></ul>
+          </div>
+        </div>
+      </main>
+
+      <aside class="sidebar">
+        <div class="card brand" style="flex-direction: column">
+          <div id="avatar" class="avatar" style="font-size: 2em">Y</div>
+          <h4 id="username" style="font-style: italic; text-align: center">
+            Xin chào,
+          </h4>
+          <div class="stats">
+            <p id="solved-problems"></p>
+            <p id="total-score"></p>
+            <p id="total-sub"></p>
+          </div>
+          <button class="btn ghost" onclick="location.href = '/logout'">
+            Logout
+          </button>
+        </div>
+      </aside>
+    </div>
+  </body>
+  <script type="module" src="js/dashboard.js"></script>
+</html>
